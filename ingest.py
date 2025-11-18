@@ -1,7 +1,7 @@
 import re
 from typing import List, Dict
 
-def chunk_log_lines(lines: List[str], source="ci_log.txt") -> List[Dict]:
+def chunk_log_lines(lines: List[str], source="sample_logs.txt") -> List[Dict]:
     chunks = []
     current = []
     meta = {}
@@ -48,7 +48,7 @@ def chunk_log_lines(lines: List[str], source="ci_log.txt") -> List[Dict]:
 
 #test run
 if __name__ == "__main__":
-    with open("logs/github_actions_10000_logs.txt") as f:
+    with open("logs/sample_logs.txt") as f:
         lines = f.read().splitlines()
     chunks = chunk_log_lines(lines, source="github_actions_10000_logs.txt")
     for c in chunks:

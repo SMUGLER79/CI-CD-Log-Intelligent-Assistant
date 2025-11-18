@@ -1,5 +1,4 @@
 import os
-import math
 from dotenv import load_dotenv
 from pinecone import Pinecone, ServerlessSpec
 from embedding_utils import load_model, embed_texts
